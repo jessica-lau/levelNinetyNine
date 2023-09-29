@@ -7,5 +7,9 @@ describe("Level99 header section", () => {
     beforeEach(() => {
       header.visit();
     });
+
+    it("Level99 logo should be visible and clickable", () => {
+      header.getLogo().should("be.visible").click();
+    });
   });
 });
