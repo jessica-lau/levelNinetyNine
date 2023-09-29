@@ -6,6 +6,10 @@ class Header {
   visit() {
     cy.visit("");
   }
+
+  getLogo() {
+    return cy.get(this.logo);
+  }
 }
 
 export default Header;
