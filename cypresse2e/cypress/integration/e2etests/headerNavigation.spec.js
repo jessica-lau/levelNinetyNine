@@ -11,5 +11,9 @@ describe("Level99 header section", () => {
     it("Level99 logo should be visible and clickable", () => {
       header.getLogo().should("be.visible").click();
     });
+
+    it("Tickets button is clickable", () => {
+      cy.get('a[href="https://ticketing.level99.com"]').click();
+    });
   });
 });
