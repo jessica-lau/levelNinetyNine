@@ -26,3 +26,5 @@ class Footer {
     return cy.get(this.twitterSocial);
   }
 }
+
+export default Footer;
