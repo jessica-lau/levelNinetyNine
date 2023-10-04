@@ -17,23 +17,25 @@ describe("Level99 header section", () => {
     });
 
     it("Explore dropdown is clickable", () => {
-      cy.get('a[href="/explore/entertainment"').click();
+      cy.get('a[href="/explore/entertainment"').should("be.visible").click();
     });
 
     it("Event Planning dropdown is clickable", () => {
-      cy.get('a[href="/events"').click();
+      cy.get('a[href="/events"').should("be.visible").click();
     });
 
     it("About dropdown is clickable", () => {
-      cy.get('a[href="/about/faq/what-is"').click();
+      cy.get('a[href="/about/faq/what-is"').should("be.visible").click();
     });
 
     it("FAQ dropdown is clickable", () => {
-      cy.get('a[href="/about/faq"').click();
+      cy.get('a[href="/about/faq"').should("be.visible").click();
     });
 
     it("Tickets button is clickable", () => {
-      cy.get('a[href="https://ticketing.level99.com"]').click();
+      cy.get('a[href="https://ticketing.level99.com"]')
+        .should("be.visible")
+        .click();
     });
   });
 });
