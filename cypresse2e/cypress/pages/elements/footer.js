@@ -9,4 +9,20 @@ class Footer {
   visit() {
     cy.visit("");
   }
+
+  getLogo() {
+    return cy.get(this.logo);
+  }
+
+  getFbSocial() {
+    return cy.get(this.facebookSocial);
+  }
+
+  getIgSocial() {
+    return cy.get(this.instagramSocial);
+  }
+
+  getTwitterSocial() {
+    return cy.get(this.twitterSocial);
+  }
 }
