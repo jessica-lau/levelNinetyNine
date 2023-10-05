@@ -3,6 +3,11 @@ class Footer {
   facebookSocial = ".social > .icon fb";
   instagramSocial = ".social > .icon ig";
   twitterSocial = ".social > .icon tw";
+  headings = "h3";
+  subHeadings = "h4";
+  inputEmail = "#mce-EMAIL";
+  subscribeLabel = ".subscribe-label";
+  subcribeBtn = "#mc-embedded-subscribe";
 
   constructor() {}
 
