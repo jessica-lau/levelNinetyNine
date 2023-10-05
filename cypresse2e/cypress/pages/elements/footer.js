@@ -7,7 +7,7 @@ class Footer {
   subHeadings = "h4";
   inputEmail = "#mce-EMAIL";
   subscribeLabel = ".subscribe-label";
-  subcribeBtn = "#mc-embedded-subscribe";
+  subscribeBtn = "#mc-embedded-subscribe";
 
   constructor() {}
 
@@ -29,6 +29,26 @@ class Footer {
 
   getTwitterSocial() {
     return cy.get(this.twitterSocial);
+  }
+
+  getHeadings() {
+    return cy.get(this.headings);
+  }
+
+  getSubHeadings() {
+    return cy.get(this.subHeadings);
+  }
+
+  getInputEmail() {
+    return cy.get(this.inputEmail);
+  }
+
+  getSubscribeLabel() {
+    return cy.get(this.subscribeLabel);
+  }
+
+  getSubscribeBtn() {
+    return cy.get(this.subscribeBtn);
   }
 }
 
