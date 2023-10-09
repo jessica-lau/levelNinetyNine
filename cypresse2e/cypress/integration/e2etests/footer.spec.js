@@ -7,5 +7,9 @@ describe("Level99 footer section", () => {
     beforeEach(() => {
       footer.visit();
     });
+
+    it("Level99 logo is visible", () => {
+      footer.getLogo().should("be.visible");
+    });
   });
 });
