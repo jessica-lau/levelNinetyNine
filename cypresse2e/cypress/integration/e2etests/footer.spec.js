@@ -11,5 +11,9 @@ describe("Level99 footer section", () => {
     it("Level99 logo is visible", () => {
       footer.getLogo().should("be.visible");
     });
+
+    it("Facebook social media icon is visible and clickable", () => {
+      footer.getFbSocial().should("be.visible").click();
+    });
   });
 });
