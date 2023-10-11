@@ -23,5 +23,10 @@ describe("Level99 footer section", () => {
     it("Twitter social media icon is visible and clickable", () => {
       footer.getTwitterSocial().should("be.visible").click();
     });
+
+    it("User can input email in subscribe field and click the subscribe button", () => {
+      footer.getInputEmail().click().type("jane@email.com");
+      footer.getSubscribeBtn().should("be.visible").click();
+    });
   });
 });
