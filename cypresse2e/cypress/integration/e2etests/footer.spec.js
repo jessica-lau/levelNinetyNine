@@ -1,4 +1,5 @@
 import Footer from "../../pages/elements/footer";
+import emailAndPassword from "../../fixtures/emailAndPassword.json";
 
 describe("Level99 footer section", () => {
   const footer = new Footer();
@@ -25,7 +26,12 @@ describe("Level99 footer section", () => {
     });
 
     it("User can input email in subscribe field and click the subscribe button", () => {
-      footer.getInputEmail().click().type("jane@email.com");
+      footer
+        .getInputEmail()
+        .click()
+        .type(emailAndPassword.validEmail)
+        .focus()
+        .blur();
       footer.getSubscribeBtn().should("be.visible").click();
     });
   });
