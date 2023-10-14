@@ -25,6 +25,10 @@ describe("Level99 footer section", () => {
       footer.getTwitterSocial().should("be.visible").click();
     });
 
+    it("'Keep up to date.' label should be visible", () => {
+      footer.getSubscribeLabel().should("contain", "Keep up to date.");
+    });
+
     it("User can input email in subscribe field and click the subscribe button", () => {
       footer
         .getInputEmail()
