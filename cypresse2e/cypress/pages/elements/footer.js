@@ -8,6 +8,7 @@ class Footer {
   inputEmail = "#mce-EMAIL";
   subscribeLabel = ".subscribe-label";
   subscribeBtn = "#mc-embedded-subscribe";
+  emailRequiredError = ".mce_inline_error";
 
   constructor() {}
 
@@ -49,6 +50,10 @@ class Footer {
 
   getSubscribeBtn() {
     return cy.get(this.subscribeBtn);
+  }
+
+  getEmailRequired() {
+    return cy.get(this.emailRequiredError);
   }
 }
 
