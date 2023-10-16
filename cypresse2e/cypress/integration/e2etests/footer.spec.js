@@ -38,5 +38,16 @@ describe("Level99 footer section", () => {
         .blur();
       footer.getSubscribeBtn().should("be.visible").click();
     });
+
+    it("Error message shows when user sumbits invalid email", () => {
+      footer
+        .getInputEmail()
+        .click()
+        .type(emailAndPassword.invalidEmail)
+        .focus()
+        .blur();
+      footer.getSubscribeBtn().should("be.visible").click();
+      footer.getEmailRequired().should("contain", "This field is required.");
+    });
   });
 });
