@@ -39,7 +39,7 @@ describe("Level99 footer section", () => {
       footer.getSubscribeBtn().should("be.visible").click();
     });
 
-    it("Error message shows when user sumbits invalid email", () => {
+    it("Error message appears when user submits invalid email", () => {
       footer
         .getInputEmail()
         .click()
