@@ -3,6 +3,7 @@ class Footer {
   facebookSocial = ".social > .icon fb";
   instagramSocial = ".social > .icon ig";
   twitterSocial = ".social > .icon tw";
+  challengeHeading = "h2";
   headings = "h3";
   subHeadings = "h4";
   inputEmail = "#mce-EMAIL";
@@ -30,6 +31,10 @@ class Footer {
 
   getTwitterSocial() {
     return cy.get(this.twitterSocial);
+  }
+
+  getChallengeHeading() {
+    return cy.get(this.challengeHeading);
   }
 
   getHeadings() {
