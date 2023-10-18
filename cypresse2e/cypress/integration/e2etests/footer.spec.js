@@ -25,6 +25,10 @@ describe("Level99 footer section", () => {
       footer.getTwitterSocial().should("be.visible").click();
     });
 
+    it("'A World of Challenges' heading should be visible", () => {
+      footer.getChallengeHeading().should("contain", "A World of ");
+    });
+
     it("'Keep up to date.' label should be visible", () => {
       footer.getSubscribeLabel().should("contain", "Keep up to date.");
     });
