@@ -33,6 +33,14 @@ describe("Level99 footer section", () => {
       footer.getHeadings().eq(0).should("contain", "Hours");
     });
 
+    it("'Pricing' heading is visible", () => {
+      footer.getHeadings().eq(1).should("contain", "Pricing");
+    });
+
+    it("'Location' heading is visible", () => {
+      footer.getHeadings().eq(2).should("contain", "Location");
+    });
+
     it("'Keep up to date.' label should be visible", () => {
       footer.getSubscribeLabel().should("contain", "Keep up to date.");
     });
