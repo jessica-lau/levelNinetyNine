@@ -29,6 +29,10 @@ describe("Level99 footer section", () => {
       footer.getChallengeHeading().should("contain", "A World of ");
     });
 
+    it("'Hours' heading is visible", () => {
+      footer.getHeadings().eq(0).should("contain", "Hours");
+    });
+
     it("'Keep up to date.' label should be visible", () => {
       footer.getSubscribeLabel().should("contain", "Keep up to date.");
     });
