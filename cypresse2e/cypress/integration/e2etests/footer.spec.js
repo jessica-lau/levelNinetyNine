@@ -41,6 +41,18 @@ describe("Level99 footer section", () => {
       footer.getHeadings().eq(2).should("contain", "Location");
     });
 
+    it("'Contact' heading is visible", () => {
+      footer.getHeadings().eq(3).should("contain", "Contact");
+    });
+
+    it("'Large Events' heading is visible", () => {
+      footer.getHeadings().eq(4).should("contain", "Large Events");
+    });
+
+    it("'Stay Connected' heading is visible", () => {
+      footer.getHeadings().eq(5).should("contain", "Stay Connected");
+    });
+
     it("'Keep up to date.' label should be visible", () => {
       footer.getSubscribeLabel().should("contain", "Keep up to date.");
     });
