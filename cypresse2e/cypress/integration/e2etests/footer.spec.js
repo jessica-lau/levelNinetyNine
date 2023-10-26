@@ -90,4 +90,8 @@ describe("Level99 footer section", () => {
       footer.getEmailRequired().should("contain", "This field is required.");
     });
   });
+
+  function section(index, text) {
+    footer.getHeadings().eq(index).should("contain", text);
+  }
 });
