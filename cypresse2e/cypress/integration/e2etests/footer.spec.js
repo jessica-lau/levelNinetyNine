@@ -45,6 +45,10 @@ describe("Level99 footer section", () => {
       footer.getHeadings().eq(3).should("contain", "Contact");
     });
 
+    it("'Stay Connected' heading is visible", () => {
+      footer.getHeadings().eq(4).should("contain", "Stay Connected");
+    });
+
     it("'Natick Mall' subheading is visible", () => {
       footer.getSubHeadings().eq(0).should("contain", "Natick Mall");
     });
@@ -59,10 +63,6 @@ describe("Level99 footer section", () => {
 
     it("'Email' subheading is visible", () => {
       footer.getSubHeadings().eq(3).should("contain", "Email");
-    });
-
-    it("'Stay Connected' heading is visible", () => {
-      footer.getHeadings().eq(4).should("contain", "Stay Connected");
     });
 
     it("'Keep up to date.' label should be visible", () => {
