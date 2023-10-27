@@ -94,4 +94,8 @@ describe("Level99 footer section", () => {
   function section(index, text) {
     footer.getHeadings().eq(index).should("contain", text);
   }
+
+  function subSection(index, text) {
+    footer.getSubHeadings().eq(index).should("contain", text);
+  }
 });
