@@ -30,22 +30,27 @@ describe("Level99 footer section", () => {
     });
 
     it("'Hours' heading is visible", () => {
+      section(0, "Hours");
       footer.getHeadings().eq(0).should("contain", "Hours");
     });
 
     it("'Pricing' heading is visible", () => {
+      section(1, "Pricing");
       footer.getHeadings().eq(1).should("contain", "Pricing");
     });
 
     it("'Location' heading is visible", () => {
+      section(2, "Location");
       footer.getHeadings().eq(2).should("contain", "Location");
     });
 
     it("'Contact' heading is visible", () => {
+      section(3, "Contact");
       footer.getHeadings().eq(3).should("contain", "Contact");
     });
 
     it("'Stay Connected' heading is visible", () => {
+      section(4, "Stay Connected");
       footer.getHeadings().eq(4).should("contain", "Stay Connected");
     });
 
