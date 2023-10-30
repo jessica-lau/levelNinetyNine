@@ -55,18 +55,22 @@ describe("Level99 footer section", () => {
     });
 
     it("'Natick Mall' subheading is visible", () => {
+      subSection(0, "Natick Mall");
       footer.getSubHeadings().eq(0).should("contain", "Natick Mall");
     });
 
     it("'General Inquries' subheading is visible", () => {
+      subSection(1, "General Inquiries");
       footer.getSubHeadings().eq(1).should("contain", "General Inquiries");
     });
 
     it("'Large Events' subheading is visible", () => {
+      subSection(2, "Large Events");
       footer.getSubHeadings().eq(2).should("contain", "Large Events");
     });
 
     it("'Email' subheading is visible", () => {
+      subSection(3, "Email");
       footer.getSubHeadings().eq(3).should("contain", "Email");
     });
 
