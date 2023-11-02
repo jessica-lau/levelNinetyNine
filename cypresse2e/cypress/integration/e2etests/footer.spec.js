@@ -37,6 +37,11 @@ describe("Level99 footer section", () => {
       section(1, "Pricing");
     });
 
+    it("Pricing link is clickable and redirects to pricing page", () => {
+      cy.get('a[href="/about/info#prices"]').click();
+      cy.url().should("include", "/about/info#prices");
+    });
+
     it("'Location' heading is visible", () => {
       section(2, "Location");
     });
