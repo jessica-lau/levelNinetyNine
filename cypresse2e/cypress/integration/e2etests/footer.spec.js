@@ -66,6 +66,11 @@ describe("Level99 footer section", () => {
       subSection(2, "Large Events");
     });
 
+    it("Events link is clickable and redirects to events page", () => {
+      cy.get('a[href="/events"]').click();
+      cy.url().should("include", "/events");
+    });
+
     it("'Email' subheading is visible", () => {
       subSection(3, "Email");
     });
