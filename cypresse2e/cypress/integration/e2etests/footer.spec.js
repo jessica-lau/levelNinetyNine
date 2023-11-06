@@ -58,6 +58,13 @@ describe("Level99 footer section", () => {
       subSection(0, "Natick Mall");
     });
 
+    it("Location link is clickable and redirects to Level99 Google Maps", () => {
+      cy.get(
+        'a[href="https://www.google.com/maps?ll=42.301328,-71.381843&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9936949303358048955"]'
+      ).click();
+      cy.url().should("include", "google.com");
+    });
+
     it("'General Inquries' subheading is visible", () => {
       subSection(1, "General Inquiries");
     });
