@@ -11,6 +11,7 @@ class Footer {
   subscribeLabel = ".subscribe-label";
   subscribeBtn = "#mc-embedded-subscribe";
   emailRequiredError = ".mce_inline_error";
+  footnotes = ".footnotes";
 
   constructor() {}
 
@@ -64,6 +65,10 @@ class Footer {
 
   getEmailRequired() {
     return cy.get(this.emailRequiredError);
+  }
+
+  getFootnotes() {
+    return cy.get(this.footnotes);
   }
 }
 
