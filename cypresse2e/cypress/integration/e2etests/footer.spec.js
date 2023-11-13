@@ -115,6 +115,13 @@ describe("Level99 footer section", () => {
       footer.getSubscribeBtn().should("be.visible").click();
       footer.getEmailRequired().should("contain", "This field is required.");
     });
+
+    it("Copryright footnote is visible", () => {
+      footer
+        .getFootnotes()
+        .should("contain", "2023")
+        .and("contain", "Level99. All rights reserved.");
+    });
   });
 
   function section(index, text) {
