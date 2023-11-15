@@ -131,4 +131,9 @@ describe("Level99 footer section", () => {
   function subSection(index, text) {
     footer.getSubHeadings().eq(index).should("contain", text);
   }
+
+  function lowerLinks(link, linkText) {
+    cy.get(link).click();
+    cy.url().should("include", linkText);
+  }
 });

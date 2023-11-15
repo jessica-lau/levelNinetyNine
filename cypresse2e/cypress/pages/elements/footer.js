@@ -12,7 +12,6 @@ class Footer {
   subscribeBtn = "#mc-embedded-subscribe";
   emailRequiredError = ".mce_inline_error";
   footnotes = ".footnotes";
-  footerLinks = ".lower-quick-links > a";
 
   constructor() {}
 
@@ -70,10 +69,6 @@ class Footer {
 
   getFootnotes() {
     return cy.get(this.footnotes);
-  }
-
-  getfooterLinks() {
-    return cy.get(this.footerLinks);
   }
 }
 
