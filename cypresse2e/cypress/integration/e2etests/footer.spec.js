@@ -122,6 +122,10 @@ describe("Level99 footer section", () => {
         .should("contain", "2023")
         .and("contain", "Level99. All rights reserved.");
     });
+
+    it("Careers link is clickable and redirects to careers page", () => {
+      lowerLinks('a[href="/careers"]', "/careers");
+    });
   });
 
   function section(index, text) {
