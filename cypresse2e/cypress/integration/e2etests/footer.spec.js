@@ -126,6 +126,10 @@ describe("Level99 footer section", () => {
     it("Careers link is clickable and redirects to careers page", () => {
       lowerLinks('a[href="/careers"]', "/careers");
     });
+
+    it("Terms & Conditions link is clickable and redirects to terms page", () => {
+      lowerLinks('a[href="/about/terms"]', "/about/terms");
+    });
   });
 
   function section(index, text) {
