@@ -130,6 +130,10 @@ describe("Level99 footer section", () => {
     it("Terms & Conditions link is clickable and redirects to terms page", () => {
       lowerLinks('a[href="/about/terms"]', "/about/terms");
     });
+
+    it("About link is clickable and redirects to about page", () => {
+      lowerLinks('a[href="/about/info"]', "/about/info");
+    });
   });
 
   function section(index, text) {
