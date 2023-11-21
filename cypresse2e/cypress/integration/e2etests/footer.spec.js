@@ -134,6 +134,10 @@ describe("Level99 footer section", () => {
     it("About link is clickable and redirects to about page", () => {
       lowerLinks('a[href="/about/info"]', "/about/info");
     });
+
+    it("Privacy Policy link is clickable and redirects to privacy page", () => {
+      lowerLinks('a[href="/about/privacy"]', "/about/privacy");
+    });
   });
 
   function section(index, text) {
