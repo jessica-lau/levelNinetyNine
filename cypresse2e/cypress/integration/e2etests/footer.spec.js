@@ -146,6 +146,13 @@ describe("Level99 footer section", () => {
     it("House Policy link is clickable and redirects to house policy page", () => {
       lowerLinks('a[href="/about/house-policy"]', "/about/house-policy");
     });
+
+    it("Gift Cards link is clickable and redirects to gift cards page", () => {
+      lowerLinks(
+        'a[href="https://www.toasttab.com/level-99/giftcards"]',
+        "https://www.toasttab.com/level-99/giftcards"
+      );
+    });
   });
 
   function section(index, text) {
