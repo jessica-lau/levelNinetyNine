@@ -150,7 +150,7 @@ describe("Level99 footer section", () => {
     it("Gift Cards link is clickable and redirects to gift cards page", () => {
       lowerLinks(
         'a[href="https://www.toasttab.com/level-99/giftcards"]',
-        "https://www.toasttab.com/level-99/giftcards"
+        "/giftcards"
       );
     });
   });
