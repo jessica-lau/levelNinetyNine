@@ -6,6 +6,10 @@ class Homepage {
   visit() {
     cy.visit("");
   }
+
+  getPillBtn() {
+    return cy.get(this.pillBtn);
+  }
 }
 
 export default Homepage;
