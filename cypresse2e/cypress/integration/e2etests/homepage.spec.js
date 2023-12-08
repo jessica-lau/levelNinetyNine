@@ -3,7 +3,9 @@ import HomePage from "../../pages/elements/homepage";
 describe("Level99 homepage", () => {
   const homepage = new HomePage();
 
-  beforeEach(() => {
-    homepage.visit();
+  context("User views content in homepage", () => {
+    beforeEach(() => {
+      homepage.visit();
+    });
   });
 });
