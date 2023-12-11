@@ -9,7 +9,7 @@ describe("Level99 homepage", () => {
     });
 
     it("Level99 heading is visible", () => {
-      homepage.getLevelHeading().should("contain");
+      homepage.getLevelHeading().should("have.attr", "alt", "Level99");
     });
   });
 });
