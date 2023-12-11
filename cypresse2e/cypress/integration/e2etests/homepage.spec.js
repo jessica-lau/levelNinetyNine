@@ -7,5 +7,9 @@ describe("Level99 homepage", () => {
     beforeEach(() => {
       homepage.visit();
     });
+
+    it("Level99 heading is visible", () => {
+      homepage.getLevelHeading().should("contain");
+    });
   });
 });
