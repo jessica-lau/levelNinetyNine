@@ -1,6 +1,7 @@
 class Homepage {
   pillBtn = ".pill-link";
   levelHeading = "h1 > img";
+  levelSubHeading = "h2";
 
   constructor() {}
 
@@ -14,6 +15,10 @@ class Homepage {
 
   getLevelHeading() {
     return cy.get(this.levelHeading);
+  }
+
+  getLevelSubHeading() {
+    return cy.get(this.levelSubHeading);
   }
 }
 
