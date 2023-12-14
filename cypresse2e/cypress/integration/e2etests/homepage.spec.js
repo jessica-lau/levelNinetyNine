@@ -11,5 +11,9 @@ describe("Level99 homepage", () => {
     it("Level99 heading is visible", () => {
       homepage.getLevelHeading().should("have.attr", "alt", "Level99");
     });
+
+    it("Level99 subheading is visible", () => {
+      homepage.getLevelSubHeading().should("contain", "A world of");
+    });
   });
 });
