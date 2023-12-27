@@ -15,5 +15,10 @@ describe("Level99 homepage", () => {
     it("Level99 subheading is visible", () => {
       homepage.getLevelSubHeading().should("contain", "A world of");
     });
+
+    it("'What is Level99' button is visible and clickable", () => {
+      homepage.getPillBtn().contains("A world ofwhat is level99?").click();
+      cy.url().should("include", "/explore/entertainment");
+    });
   });
 });
