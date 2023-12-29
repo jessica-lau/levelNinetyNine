@@ -17,7 +17,7 @@ describe("Level99 homepage", () => {
     });
 
     it("'What is Level99' button is visible and clickable", () => {
-      homepage.getPillBtn().contains("A world ofwhat is level99?").click();
+      homepage.getPillBtn().contains("what is level99?").click();
       cy.url().should("include", "/explore/entertainment");
     });
 
