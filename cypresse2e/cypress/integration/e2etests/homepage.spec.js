@@ -25,5 +25,14 @@ describe("Level99 homepage", () => {
       homepage.getPillBtn().contains("Learn More").click();
       cy.url().should("include", "/explore/entertainment");
     });
+
+    it("'Explore Food & Drinks' button is visible and clickable", () => {
+      homepage
+        .getPillBtn()
+        .should("have.attr", "href", "http://nightshiftnatick.com")
+        .invoke("removeAttr", "target")
+        .click();
+      cy.url().should("include", "http://nightshiftnatick");
+    });
   });
 });
