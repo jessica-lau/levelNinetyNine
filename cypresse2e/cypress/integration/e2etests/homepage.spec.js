@@ -20,5 +20,10 @@ describe("Level99 homepage", () => {
       homepage.getPillBtn().contains("A world ofwhat is level99?").click();
       cy.url().should("include", "/explore/entertainment");
     });
+
+    it("'Learn More' button is visible and clickable", () => {
+      homepage.getPillBtn().contains("Learn More").click();
+      cy.url().should("include", "/explore/entertainment");
+    });
   });
 });
