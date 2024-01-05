@@ -3,6 +3,7 @@ class Homepage {
   levelHeading = "h1 > img";
   levelSubHeading = "h2";
   levelDetails = "h3";
+  levelSubDetails = "p";
 
   constructor() {}
 
@@ -24,6 +25,10 @@ class Homepage {
 
   getLevelDetails() {
     return cy.get(this.levelDetails);
+  }
+
+  getLevelSubDetails() {
+    return cy.get(this.levelSubDetails);
   }
 }
 
