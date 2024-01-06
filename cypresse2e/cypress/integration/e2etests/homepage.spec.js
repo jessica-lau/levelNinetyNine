@@ -25,6 +25,13 @@ describe("Level99 homepage", () => {
       homepage.getLevelDetails().contains("Award-winning").should("be.visible");
     });
 
+    it("'Award Winning' sub description is visible", () => {
+      homepage
+        .getLevelSubDetails()
+        .contains("Test yourselves with our unique challenges.")
+        .should("be.visible");
+    });
+
     it("'Learn More' button is visible and clickable", () => {
       homepage.getPillBtn().contains("Learn More").click();
       cy.url().should("include", "/explore/entertainment");
