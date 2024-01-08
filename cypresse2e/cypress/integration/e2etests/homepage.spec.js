@@ -36,6 +36,13 @@ describe("Level99 homepage", () => {
       homepage.getLevelDetails().contains("Cutting Edge").should("be.visible");
     });
 
+    it("'Live Action' sub description is visible", () => {
+      homepage
+        .getLevelSubDetails()
+        .contains("A sprawling real-life game world,")
+        .should("be.visible");
+    });
+
     it("'Learn More' button is visible and clickable", () => {
       homepage.getPillBtn().contains("Learn More").click();
       cy.url().should("include", "/explore/entertainment");
