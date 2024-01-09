@@ -48,6 +48,13 @@ describe("Level99 homepage", () => {
       cy.url().should("include", "/explore/entertainment");
     });
 
+    it("'Locally-Crafted' description is visible", () => {
+      homepage
+        .getLevelDetails()
+        .contains("Locally-Crafted ")
+        .should("be.visible");
+    });
+
     it("'Explore Food & Drinks' button is visible and clickable", () => {
       homepage
         .getPillBtn()
