@@ -55,6 +55,13 @@ describe("Level99 homepage", () => {
         .should("be.visible");
     });
 
+    it("'Locally-Crafted' sub description is visible", () => {
+      homepage
+        .getLevelSubDetails()
+        .contains("A 20 Boston Craft Beers on Tap, real-life game world,")
+        .should("be.visible");
+    });
+
     it("'Explore Food & Drinks' button is visible and clickable", () => {
       homepage
         .getPillBtn()
