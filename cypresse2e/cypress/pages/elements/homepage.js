@@ -4,6 +4,7 @@ class Homepage {
   levelSubHeading = "h2";
   levelDetails = "h3";
   levelSubDetails = "p";
+  restaurantGallery = ".section restaurant-gallery";
 
   constructor() {}
 
@@ -29,6 +30,10 @@ class Homepage {
 
   getLevelSubDetails() {
     return cy.get(this.levelSubDetails);
+  }
+
+  getRestaurantGallery() {
+    return cy.get(this.restaurantGallery);
   }
 }
 
