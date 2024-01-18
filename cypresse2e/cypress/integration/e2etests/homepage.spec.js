@@ -71,8 +71,8 @@ describe("Level99 homepage", () => {
       cy.url().should("include", "http://nightshiftnatick");
     });
 
-    it("Restaurant gallery images are visible", () => {
-      homepage.getRestaurantGallery().should("be.visible");
+    it("Restaurant gallery first image is visible", () => {
+      homepage.getRestaurantGallery().eq(0).should("be.visible");
     });
   });
 });
