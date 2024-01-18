@@ -4,7 +4,7 @@ class Homepage {
   levelSubHeading = "h2";
   levelDetails = "h3";
   levelSubDetails = "p";
-  restaurantGallery = ".section restaurant-gallery";
+  restaurantGallery = ".section restaurant-gallery > .images-container";
 
   constructor() {}
 
