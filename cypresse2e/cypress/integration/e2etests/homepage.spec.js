@@ -74,6 +74,10 @@ describe("Level99 homepage", () => {
     it("Restaurant gallery first image is visible", () => {
       homepage.getRestaurantGallery().eq(0).should("be.visible");
     });
+
+    it("Restaurant gallery first image is visible", () => {
+      image(0);
+    });
   });
 
   function image(index) {
