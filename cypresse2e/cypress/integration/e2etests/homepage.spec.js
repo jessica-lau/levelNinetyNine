@@ -75,4 +75,8 @@ describe("Level99 homepage", () => {
       homepage.getRestaurantGallery().eq(0).should("be.visible");
     });
   });
+
+  function image(index) {
+    homepage.getRestaurantGallery().eq(index).should("be.visible");
+  }
 });
