@@ -86,6 +86,10 @@ describe("Level99 homepage", () => {
     it("Restaurant gallery third image is visible", () => {
       image(2);
     });
+
+    it("Restaurant gallery fourth image is visible", () => {
+      image(3);
+    });
   });
 
   function image(index) {
