@@ -1,5 +1,6 @@
 class Header {
   logo = ".logo-container > .logo";
+  locationDropdown = "button > .select-button";
 
   constructor() {}
 
@@ -9,6 +10,10 @@ class Header {
 
   getLogo() {
     return cy.get(this.logo);
+  }
+
+  locationDropdown() {
+    return cy.get(this.locationDropdown);
   }
 }
 
