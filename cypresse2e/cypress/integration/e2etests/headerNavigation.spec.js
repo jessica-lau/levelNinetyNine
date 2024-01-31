@@ -12,6 +12,11 @@ describe("Level99 header section", () => {
       header.getLogo().should("be.visible").click();
     });
 
+    it("Select 'Choose Location' in level99 location dropdown", () => {
+      header.getLocationDropdown().click();
+      header.getLocationOption().eq(0).click();
+    });
+
     it("Home dropdown is clickable", () => {
       cy.get('a[href="/"]').click();
     });
