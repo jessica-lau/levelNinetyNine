@@ -17,6 +17,11 @@ describe("Level99 header section", () => {
       header.getLocationOption().eq(0).click();
     });
 
+    it("Select Natick in level99 location dropdown", () => {
+      header.getLocationDropdown().click();
+      header.getLocationOption().eq(1).should("contain", "Natick, MA").click();
+    });
+
     it("Home dropdown is clickable", () => {
       cy.get('a[href="/"]').click();
     });
