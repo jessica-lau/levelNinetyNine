@@ -14,7 +14,11 @@ describe("Level99 header section", () => {
 
     it("Select 'Choose Location' in level99 location dropdown", () => {
       header.getLocationDropdown().click();
-      header.getLocationOption().eq(0).click();
+      header
+        .getLocationOption()
+        .eq(0)
+        .should("contain", "Select Location")
+        .click();
     });
 
     it("Select Natick in level99 location dropdown", () => {
