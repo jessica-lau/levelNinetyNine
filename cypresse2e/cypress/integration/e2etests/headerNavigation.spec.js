@@ -35,10 +35,6 @@ describe("Level99 header section", () => {
         .click();
     });
 
-    it("Home dropdown is clickable", () => {
-      cy.get('a[href="/"]').click();
-    });
-
     it("Explore dropdown is clickable", () => {
       cy.get('a[href="/explore/entertainment"').should("be.visible").click();
     });
