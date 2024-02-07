@@ -39,8 +39,13 @@ describe("Level99 header section", () => {
       cy.get('a[href="/about"').should("be.visible").click();
     });
 
-    it("Event Planning dropdown is clickable", () => {
-      cy.get('a[href="/events"').should("be.visible").click();
+    it("User can select options under Visit dropdown", () => {
+      cy.get('a[href="/visit"').trigger("mouseover");
+      cy.get('a[href="/visit#pricing"]').should("be.visible").click();
+      cy.get('a[href="/visit"').trigger("mouseover");
+      cy.get('a[href="/visit#hours"]').should("be.visible").click();
+      cy.get('a[href="/visit"').trigger("mouseover");
+      cy.get('a[href="/visit#events"]').should("be.visible").click();
     });
 
     it("About dropdown is clickable", () => {
