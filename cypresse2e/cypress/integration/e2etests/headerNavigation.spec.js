@@ -56,6 +56,10 @@ describe("Level99 header section", () => {
       cy.get('a[href="/food-beverage"]').should("be.visible").click();
     });
 
+    it("Events navigation is clickable", () => {
+      cy.get('a[href="/events"]').should("be.visible").click();
+    });
+
     it("Tickets button is clickable", () => {
       cy.get('a[href="https://ticketing.level99.com"]')
         .should("be.visible")
