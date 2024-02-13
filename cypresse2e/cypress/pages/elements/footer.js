@@ -21,6 +21,10 @@ class Footer {
     return cy.get(this.logo);
   }
 
+  getSocial() {
+    return cy.get(this.social);
+  }
+
   getChallengeHeading() {
     return cy.get(this.challengeHeading);
   }
