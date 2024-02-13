@@ -1,8 +1,6 @@
 class Footer {
   logo = ".block logo";
-  facebookSocial = ".social > .icon fb";
-  instagramSocial = ".social > .icon ig";
-  twitterSocial = ".social > .icon tw";
+  social = ".socials > a";
   challengeHeading = "h2";
   headings = "h3";
   subHeadings = "h4";
@@ -21,18 +19,6 @@ class Footer {
 
   getLogo() {
     return cy.get(this.logo);
-  }
-
-  getFbSocial() {
-    return cy.get(this.facebookSocial);
-  }
-
-  getIgSocial() {
-    return cy.get(this.instagramSocial);
-  }
-
-  getTwitterSocial() {
-    return cy.get(this.twitterSocial);
   }
 
   getChallengeHeading() {
