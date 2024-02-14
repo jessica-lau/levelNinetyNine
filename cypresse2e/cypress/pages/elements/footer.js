@@ -2,7 +2,7 @@ class Footer {
   logo = ".block logo";
   social = ".socials > a";
   challengeHeading = "h2";
-  headings = "h3";
+  headings = ".footer-items > .item";
   subHeadings = "h4";
   description = "p";
   inputEmail = "#mce-EMAIL";

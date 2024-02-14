@@ -37,17 +37,17 @@ describe("Level99 footer section", () => {
       section(0, "Hours");
     });
 
+    it("'Location' heading is visible", () => {
+      section(1, "Location");
+    });
+
     it("'Pricing' heading is visible", () => {
-      section(1, "Pricing");
+      section(2, "Pricing");
     });
 
     it("Pricing link is clickable and redirects to pricing page", () => {
       cy.get('a[href="/about/info#prices"]').click();
       cy.url().should("include", "/about/info#prices");
-    });
-
-    it("'Location' heading is visible", () => {
-      section(2, "Location");
     });
 
     it("'Contact' heading is visible", () => {
