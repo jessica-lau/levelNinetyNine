@@ -41,8 +41,20 @@ describe("Level99 footer section", () => {
       section(1, "Location");
     });
 
+    it("'Support' heading is visible", () => {
+      section(2, "Support");
+    });
+
     it("'Pricing' heading is visible", () => {
-      section(2, "Pricing");
+      section(3, "Pricing");
+    });
+
+    it("'Purchasing' heading is visible", () => {
+      section(4, "Purchasing");
+    });
+
+    it("'Careers' heading is visible", () => {
+      section(5, "Careers");
     });
 
     it("Pricing link is clickable and redirects to pricing page", () => {
