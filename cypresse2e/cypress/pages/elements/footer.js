@@ -3,7 +3,7 @@ class Footer {
   social = ".socials > a";
   challengeHeading = "h2";
   headings = ".footer-items > .item";
-  subHeadings = "h4";
+  subHeadings = ".footer-link";
   description = "p";
   inputEmail = "#mce-EMAIL";
   subscribeLabel = ".subscribe-label";
