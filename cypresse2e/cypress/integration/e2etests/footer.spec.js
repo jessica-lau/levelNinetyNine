@@ -57,6 +57,10 @@ describe("Level99 footer section", () => {
       section(5, "Careers");
     });
 
+    it("Stay Connected' heading is visible", () => {
+      footer.getNewsletterHeading().should("contain", "Stay Connected");
+    });
+
     it("Pricing link is clickable and redirects to pricing page", () => {
       cy.get('a[href="/about/info#prices"]').click();
       cy.url().should("include", "/about/info#prices");
