@@ -4,6 +4,7 @@ class Footer {
   challengeHeading = "h2";
   headings = ".footer-items > .item";
   subHeadings = ".footer-link";
+  newsletterHeading = ".newsletter-form > .heading";
   description = "p";
   inputEmail = "#mce-EMAIL";
   subscribeLabel = ".subscribe-label";
@@ -35,6 +36,10 @@ class Footer {
 
   getSubHeadings() {
     return cy.get(this.subHeadings);
+  }
+
+  getNewsletterHeading() {
+    return cy.get(this.newsletterHeading);
   }
 
   getDescription() {
