@@ -83,6 +83,27 @@ describe("Level99 footer section", () => {
         );
     });
 
+    it("User can input email in subscribe field and click the subscribe button", () => {
+      footer
+        .getInputEmail()
+        .click()
+        .type(emailAndPassword.validEmail)
+        .focus()
+        .blur();
+      footer.getSubscribeBtn().should("be.visible").click();
+    });
+
+    it("Error message appears when user submits invalid email", () => {
+      footer
+        .getInputEmail()
+        .click()
+        .type(emailAndPassword.invalidEmail)
+        .focus()
+        .blur();
+      footer.getSubscribeBtn().should("be.visible").click();
+      footer.getEmailRequired().should("contain", "This field is required.");
+    });
+
     it("Level99 Location link is clickable and redirects to Google Maps", () => {
       cy.get(
         'a[href="https://www.google.com/maps?ll=42.301328,-71.381843&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9936949303358048955"]'
@@ -114,27 +135,6 @@ describe("Level99 footer section", () => {
 
     it("'Email' subheading is visible", () => {
       subSection(3, "Email");
-    });
-
-    it("User can input email in subscribe field and click the subscribe button", () => {
-      footer
-        .getInputEmail()
-        .click()
-        .type(emailAndPassword.validEmail)
-        .focus()
-        .blur();
-      footer.getSubscribeBtn().should("be.visible").click();
-    });
-
-    it("Error message appears when user submits invalid email", () => {
-      footer
-        .getInputEmail()
-        .click()
-        .type(emailAndPassword.invalidEmail)
-        .focus()
-        .blur();
-      footer.getSubscribeBtn().should("be.visible").click();
-      footer.getEmailRequired().should("contain", "This field is required.");
     });
 
     it("Copryright footnote is visible", () => {
