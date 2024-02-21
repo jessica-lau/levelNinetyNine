@@ -74,6 +74,15 @@ describe("Level99 footer section", () => {
       section(4, "Stay Connected");
     });
 
+    it("Keep up to date label should be visible", () => {
+      footer
+        .getSubscribeLabel()
+        .should(
+          "contain",
+          "Get the latest updates about Level99's new features and updates."
+        );
+    });
+
     it("Level99 Location link is clickable and redirects to Google Maps", () => {
       cy.get(
         'a[href="https://www.google.com/maps?ll=42.301328,-71.381843&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9936949303358048955"]'
@@ -105,10 +114,6 @@ describe("Level99 footer section", () => {
 
     it("'Email' subheading is visible", () => {
       subSection(3, "Email");
-    });
-
-    it("'Keep up to date.' label should be visible", () => {
-      footer.getSubscribeLabel().should("contain", "Keep up to date.");
     });
 
     it("User can input email in subscribe field and click the subscribe button", () => {
