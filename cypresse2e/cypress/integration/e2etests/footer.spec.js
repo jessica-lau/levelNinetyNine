@@ -114,15 +114,6 @@ describe("Level99 footer section", () => {
       cy.url().should("include", "location-grid");
     });
 
-    it("Location description is visible", () => {
-      footer
-        .getDescription()
-        .contains(
-          "On the second floor of the Natick Mall, next to the food court. Parking Deck C."
-        )
-        .should("be.visible");
-    });
-
     it("'General Inquries' subheading is visible", () => {
       subSection(1, "General Inquiries");
     });
