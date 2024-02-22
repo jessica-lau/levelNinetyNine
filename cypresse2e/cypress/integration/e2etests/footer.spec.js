@@ -104,11 +104,14 @@ describe("Level99 footer section", () => {
       footer.getEmailRequired().should("contain", "This field is required.");
     });
 
-    it("Level99 Location link is clickable and redirects to Google Maps", () => {
-      cy.get(
-        'a[href="https://www.google.com/maps?ll=42.301328,-71.381843&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9936949303358048955"]'
-      ).click();
-      cy.url().should("include", "google.com");
+    it("Level99 Hours link is clickable and redirects to hours page", () => {
+      cy.get('a[href="https://level99.com/visit#location-grid"]').eq(0).click();
+      cy.url().should("include", "location-grid");
+    });
+
+    it("Level99 Location link is clickable and redirects to location page", () => {
+      cy.get('a[href="https://level99.com/visit#location-grid"]').eq(1).click();
+      cy.url().should("include", "location-grid");
     });
 
     it("Location description is visible", () => {
