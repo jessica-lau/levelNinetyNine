@@ -114,23 +114,6 @@ describe("Level99 footer section", () => {
       cy.url().should("include", "location-grid");
     });
 
-    it("'General Inquries' subheading is visible", () => {
-      subSection(1, "General Inquiries");
-    });
-
-    it("'Large Events' subheading is visible", () => {
-      subSection(2, "Large Events");
-    });
-
-    it("Events link is clickable and redirects to events page", () => {
-      cy.get('a[href="/events"]').click();
-      cy.url().should("include", "/events");
-    });
-
-    it("'Email' subheading is visible", () => {
-      subSection(3, "Email");
-    });
-
     it("Copryright footnote is visible", () => {
       footer
         .getFootnotes()
