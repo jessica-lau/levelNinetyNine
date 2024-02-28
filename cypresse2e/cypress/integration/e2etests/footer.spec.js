@@ -114,10 +114,10 @@ describe("Level99 footer section", () => {
       cy.url().should("include", "location-grid");
     });
 
-    it("Copryright footnote is visible", () => {
+    it("Copryright text is visible", () => {
       footer
-        .getFootnotes()
-        .should("contain", "2023")
+        .getCopyright()
+        .should("contain", "2024")
         .and("contain", "Level99. All rights reserved.");
     });
 
