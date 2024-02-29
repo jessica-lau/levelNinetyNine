@@ -121,35 +121,20 @@ describe("Level99 footer section", () => {
         .and("contain", "Level99. All rights reserved.");
     });
 
-    it("Careers link is clickable and redirects to careers page", () => {
-      lowerLinks('a[href="/careers"]', "/careers");
-    });
-
     it("Terms & Conditions link is clickable and redirects to terms page", () => {
-      lowerLinks('a[href="/about/terms"]', "/about/terms");
-    });
-
-    it("About link is clickable and redirects to about page", () => {
-      lowerLinks('a[href="/about/info"]', "/about/info");
+      lowerLinks('a[href="/terms-and-conditions"]', "/terms-and-conditions");
     });
 
     it("Privacy Policy link is clickable and redirects to privacy page", () => {
-      lowerLinks('a[href="/about/privacy"]', "/about/privacy");
-    });
-
-    it("FAQ link is clickable and redirects to FAQ page", () => {
-      lowerLinks('a[href="/about/faq"]', "/about/faq");
+      lowerLinks('a[href="/privacy-policy"]', "/privacy-policy");
     });
 
     it("House Policy link is clickable and redirects to house policy page", () => {
-      lowerLinks('a[href="/about/house-policy"]', "/about/house-policy");
+      lowerLinks('a[href="/house-policy"]', "/house-policy");
     });
 
-    it("Gift Cards link is clickable and redirects to gift cards page", () => {
-      lowerLinks(
-        'a[href="https://www.toasttab.com/level-99/giftcards"]',
-        "/giftcards"
-      );
+    it("Website Accessibilty link is clickable and redirects to accessibilty page", () => {
+      lowerLinks('a[href="/#"]', "/#");
     });
   });
 
