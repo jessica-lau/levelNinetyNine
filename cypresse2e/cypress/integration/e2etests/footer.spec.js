@@ -37,6 +37,10 @@ describe("Level99 footer section", () => {
       section(0, "Hours");
     });
 
+    it("Learn hours link is clickable and redirects to hours of operation page", () => {
+      lowerLinks('a[href=""/visit#location-grid"]', "/visit#location-grid");
+    });
+
     it("'Location' heading is visible", () => {
       section(1, "Location");
     });
