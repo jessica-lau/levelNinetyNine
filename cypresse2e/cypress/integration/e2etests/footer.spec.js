@@ -37,8 +37,9 @@ describe("Level99 footer section", () => {
       section(0, "Hours");
     });
 
-    it("Learn hours link is clickable and redirects to hours of operation page", () => {
-      lowerLinks('a[href=""/visit#location-grid"]', "/visit#location-grid");
+    it("Level99 Hours link is clickable and redirects to hours page", () => {
+      cy.get('a[href="https://level99.com/visit#location-grid"]').eq(0).click();
+      cy.url().should("include", "location-grid");
     });
 
     it("'Location' heading is visible", () => {
@@ -106,11 +107,6 @@ describe("Level99 footer section", () => {
         .blur();
       footer.getSubscribeBtn().should("be.visible").click();
       footer.getEmailRequired().should("contain", "This field is required.");
-    });
-
-    it("Level99 Hours link is clickable and redirects to hours page", () => {
-      cy.get('a[href="https://level99.com/visit#location-grid"]').eq(0).click();
-      cy.url().should("include", "location-grid");
     });
 
     it("Level99 Location link is clickable and redirects to location page", () => {
