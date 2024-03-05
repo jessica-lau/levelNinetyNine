@@ -46,6 +46,11 @@ describe("Level99 footer section", () => {
       section(1, "Location");
     });
 
+    it("Level99 Location link is clickable and redirects to location page", () => {
+      cy.get('a[href="https://level99.com/visit#location-grid"]').eq(1).click();
+      cy.url().should("include", "location-grid");
+    });
+
     it("'Support' heading is visible", () => {
       section(2, "Support");
     });
@@ -107,11 +112,6 @@ describe("Level99 footer section", () => {
         .blur();
       footer.getSubscribeBtn().should("be.visible").click();
       footer.getEmailRequired().should("contain", "This field is required.");
-    });
-
-    it("Level99 Location link is clickable and redirects to location page", () => {
-      cy.get('a[href="https://level99.com/visit#location-grid"]').eq(1).click();
-      cy.url().should("include", "location-grid");
     });
 
     it("Copryright text is visible", () => {
