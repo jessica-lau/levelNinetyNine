@@ -55,6 +55,13 @@ describe("Level99 footer section", () => {
       section(2, "Support");
     });
 
+    it("Support link is clickable and redirects to support page", () => {
+      cy.get(
+        'a[href="https://level99.zendesk.com/hc/en-us/requests/new"]'
+      ).click();
+      cy.url().should("include", "/requests/new");
+    });
+
     it("'Pricing' heading is visible", () => {
       section(3, "Pricing");
     });
