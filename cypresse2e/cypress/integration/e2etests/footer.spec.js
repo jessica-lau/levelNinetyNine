@@ -66,6 +66,11 @@ describe("Level99 footer section", () => {
       section(3, "Pricing");
     });
 
+    it("Pricing link is clickable and redirects to pricing page", () => {
+      cy.get('a[href="/visit#pricing"]').click();
+      cy.url().should("include", "/visit#pricing");
+    });
+
     it("'Purchasing' heading is visible", () => {
       section(4, "Purchasing");
     });
@@ -76,11 +81,6 @@ describe("Level99 footer section", () => {
 
     it("Stay Connected' heading is visible", () => {
       footer.getNewsletterHeading().should("contain", "Stay Connected");
-    });
-
-    it("Pricing link is clickable and redirects to pricing page", () => {
-      cy.get('a[href="/about/info#prices"]').click();
-      cy.url().should("include", "/about/info#prices");
     });
 
     it("'Contact' heading is visible", () => {
