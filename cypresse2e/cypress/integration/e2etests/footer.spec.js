@@ -75,6 +75,16 @@ describe("Level99 footer section", () => {
       section(4, "Purchasing");
     });
 
+    it("Tickets link is clickable and redirects to tickets page", () => {
+      cy.get('a[href="https://ticketing.level99.com/visit""]').click();
+      cy.url().should("include", "/visit");
+    });
+
+    it("Gifts Cards link is clickable and redirects to gift cards page", () => {
+      cy.get('a[href="https://www.toasttab.com/level-99/giftcards"]').click();
+      cy.url().should("include", "/giftcards");
+    });
+
     it("'Careers' heading is visible", () => {
       section(5, "Careers");
     });
