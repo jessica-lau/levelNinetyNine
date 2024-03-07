@@ -89,6 +89,11 @@ describe("Level99 footer section", () => {
       section(5, "Careers");
     });
 
+    it("Career Opportunites link is clickable and redirects to careers page", () => {
+      cy.get('a[href="/careers"]').click();
+      cy.url().should("include", "/careers");
+    });
+
     it("Stay Connected' heading is visible", () => {
       footer.getNewsletterHeading().should("contain", "Stay Connected");
     });
