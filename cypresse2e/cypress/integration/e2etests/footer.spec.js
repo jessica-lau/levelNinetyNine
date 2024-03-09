@@ -94,6 +94,11 @@ describe("Level99 footer section", () => {
       cy.url().should("include", "/careers");
     });
 
+    it("Artists Opportunites link is clickable and redirects to artists page", () => {
+      cy.get('a[href="/artists"]').click();
+      cy.url().should("include", "/artists");
+    });
+
     it("Stay Connected' heading is visible", () => {
       footer.getNewsletterHeading().should("contain", "Stay Connected");
     });
