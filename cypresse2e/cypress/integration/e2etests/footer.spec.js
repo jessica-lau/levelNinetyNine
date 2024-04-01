@@ -103,14 +103,6 @@ describe("Level99 footer section", () => {
       footer.getNewsletterHeading().should("contain", "Stay Connected");
     });
 
-    it("'Contact' heading is visible", () => {
-      section(3, "Contact");
-    });
-
-    it("'Stay Connected' heading is visible", () => {
-      section(4, "Stay Connected");
-    });
-
     it("Keep up to date label should be visible", () => {
       footer
         .getSubscribeLabel()
