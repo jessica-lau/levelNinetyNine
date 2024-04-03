@@ -133,7 +133,7 @@ describe("Level99 footer section", () => {
       footer.getEmailRequired().should("contain", "This field is required.");
     });
 
-    it("Copryright text is visible", () => {
+    it("Copryright is visible", () => {
       footer
         .getCopyright()
         .should("contain", "2024")
