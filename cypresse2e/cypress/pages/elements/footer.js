@@ -3,7 +3,6 @@ class Footer {
   social = ".socials > a";
   challengeHeading = "h2";
   headings = ".footer-items > .item";
-  subHeadings = ".footer-link";
   newsletterHeading = ".newsletter-form > .heading";
   description = "p";
   inputEmail = "#mce-EMAIL";
@@ -32,10 +31,6 @@ class Footer {
 
   getHeadings() {
     return cy.get(this.headings);
-  }
-
-  getSubHeadings() {
-    return cy.get(this.subHeadings);
   }
 
   getNewsletterHeading() {
