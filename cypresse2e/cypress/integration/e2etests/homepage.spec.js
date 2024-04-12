@@ -8,6 +8,10 @@ describe("Level99 homepage", () => {
       homepage.visit();
     });
 
+    it("Homepage Get Tickets button is visible and clickable", () => {
+      cy.get('a[href="https://ticketing.level99.com"]').click();
+    });
+
     it("Level99 heading is visible", () => {
       homepage.getLevelHeading().should("have.attr", "alt", "Level99");
     });
