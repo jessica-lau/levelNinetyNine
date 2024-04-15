@@ -6,6 +6,7 @@ class Homepage {
   levelSubDetails = "p";
   restaurantGallery =
     ".section restaurant-gallery > .images-container > .image-container";
+  roomsTitle = ".element-grid > .title";
 
   constructor() {}
 
@@ -35,6 +36,10 @@ class Homepage {
 
   getRestaurantGallery() {
     return cy.get(this.restaurantGallery);
+  }
+
+  getRoomsTitle() {
+    return cy.get(this.roomsTitle);
   }
 }
 
