@@ -8,7 +8,7 @@ class Homepage {
     ".section restaurant-gallery > .images-container > .image-container";
   elementTitle = ".element-grid > div > .title";
   subElementTitle = ".element-grid > div > .sub-title";
-  elementTitle = ".element-grid > div > .description";
+  elementDescription = ".element-grid > div > .description";
 
   constructor() {}
 
