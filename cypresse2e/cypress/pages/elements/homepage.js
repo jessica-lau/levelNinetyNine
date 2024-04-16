@@ -6,7 +6,9 @@ class Homepage {
   levelSubDetails = "p";
   restaurantGallery =
     ".section restaurant-gallery > .images-container > .image-container";
-  roomsTitle = ".element-grid > div > .title";
+  elementTitle = ".element-grid > div > .title";
+  subElementTitle = ".element-grid > div > .sub-title";
+  elementTitle = ".element-grid > div > .description";
 
   constructor() {}
 
