@@ -40,8 +40,16 @@ class Homepage {
     return cy.get(this.restaurantGallery);
   }
 
-  getRoomsTitle() {
-    return cy.get(this.roomsTitle);
+  getElementTitle() {
+    return cy.get(this.elementTitle);
+  }
+
+  getSubElementTitle() {
+    return cy.get(this.subElementTitle);
+  }
+
+  getElementDescription() {
+    return cy.get(this.elementDescription);
   }
 }
 
