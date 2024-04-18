@@ -16,6 +16,10 @@ describe("Level99 homepage", () => {
       cy.getElementTitle().eq(0).should("contain", "Rooms");
     });
 
+    it("Duels element title is visible and clickable", () => {
+      cy.getElementTitle().eq(1).should("contain", "Duels");
+    });
+
     it("Level99 heading is visible", () => {
       homepage.getLevelHeading().should("have.attr", "alt", "Level99");
     });
