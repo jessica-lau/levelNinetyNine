@@ -12,6 +12,10 @@ describe("Level99 homepage", () => {
       cy.get('a[href="https://ticketing.level99.com"]').click();
     });
 
+    it("Rooms element title is visible and clickable", () => {
+      cy.getElementTitle().eq(0).should("contain", "Rooms");
+    });
+
     it("Level99 heading is visible", () => {
       homepage.getLevelHeading().should("have.attr", "alt", "Level99");
     });
